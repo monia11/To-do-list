@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+h1 {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+body {
+  background: rgb(9, 98, 121);
+  background: linear-gradient(
+    204deg,
+    rgba(9, 98, 121, 1) 5%,
+    rgba(0, 211, 255, 0.7931547619047619) 100%
+  );
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  font-size: 20px;
+  width: 50%;
+  min-height: 50%;
+  position: absolute;
+  left: 22%;
+  top: 10%;
+  background-color: cornsilk;
+  -webkit-box-shadow: 21px 22px 13px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 21px 22px 13px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 21px 22px 13px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+}
+
+.list {
+  position: relative;
+  float: left;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+
+  left: 6%;
+}
+
+button {
+  width: 50px;
+  height: 45px;
+  font-size: 20px;
+}
+
+.todo button {
+  width: fit-content;
+  height: fit-content;
+}
+
+.todo {
+  line-break: auto;
+}
+input {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  position: relative;
+
+  left: 30%;
+}
+.time {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
