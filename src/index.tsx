@@ -56,10 +56,9 @@ export default function App(): JSX.Element {
 
   return (
     <div className="container">
-      <Fragment>
-        <h1>To-Do List </h1>
-        <div className="list">
-          <form onSubmit={handleSubmit}>
+    <div className = "header">
+    <h1 className = "title">To-Do List </h1>
+        <form onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="What do you want to do?"
@@ -70,21 +69,30 @@ export default function App(): JSX.Element {
             <button type="submit">✍ </button>
           </form>
 
-          <section className="todo">
+    </div>
+       
+
+        <div className="list">
+         
             {tasks.map((task: ITask, index: number) => (
               <Fragment key={index}>
-                <div
+                <div className = "todo__text"
                   style={{
                     fontWeight: task.important ? 'bold' : 'normal',
                     color: task.complete ? 'grey' : ''
                   }}
                 >
                   {task.text}
-                </div>
-                <div className="time">Added: {task.setTime} </div>
+                  <div className="time">Added: {task.setTime} </div>
                 <div className="time">
                   {task.complete ? `Finished  ${time()}` : ''}
                 </div>
+                
+                 
+                </div>
+
+                <div className= "buttons">
+
                 <button type="button" onClick={() => completeTask(index)}>
                   Done {task.complete ? '☑' : '☐'}
                 </button>
@@ -95,11 +103,15 @@ export default function App(): JSX.Element {
                 <button type="button" onClick={() => removeTask(index)}>
                   ✖
                 </button>
+                </div>
+              
+                
+          
               </Fragment>
             ))}
-          </section>
+        
         </div>
-      </Fragment>
+      
     </div>
   );
 }
